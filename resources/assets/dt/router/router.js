@@ -1,6 +1,6 @@
-import App from '../App'
+import App from '../App.vue'
 
-const example = r => require.ensure([], () => r(require('../page/Example')), './js/dt/example')
+const index = r => require.ensure([], () => r(require('../page/index')), './js/dt/index')
 
 export default [{
     path: '',
@@ -9,11 +9,11 @@ export default [{
         //地址为空时跳转home页面
         {
             path: '',
-            redirect: '/example'
+            redirect: '/login'
         },
         {
-            path: '/example',
-            component: example
+            path: '/index',
+            component: index
         },
     ]
 }]
