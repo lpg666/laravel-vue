@@ -16,7 +16,7 @@ Route::get('/', function () {
 });
 
 //namespace命名空间，middleware中间件，domain子域名路由, as路由名称
-Route::group(['namespace' => 'Api', 'domain' => envDomain('api'), 'as' => 'api.'],function (){
+Route::group(['namespace' => 'Api', 'domain' => envDomain('api'), 'as' => 'api.', 'middleware' => 'kuayu'],function (){
     Route::group(['namespace' => 'v1', 'prefix' => 'v1'], function(){
         //Auth
         Route::get('auth/register','AuthController@register');

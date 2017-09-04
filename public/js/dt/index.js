@@ -239,6 +239,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                 this.spanRight = 21;
             }
         }
+    },
+    mounted: function mounted() {
+        axios.get('v1/auth/register').then(function (data) {
+            console.log(data);
+        }).catch(function (err) {});
     }
 });
 

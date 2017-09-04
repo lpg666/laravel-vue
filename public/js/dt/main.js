@@ -11389,6 +11389,16 @@ var router = new __WEBPACK_IMPORTED_MODULE_3_vue_router__["a" /* default */]({
     routes: __WEBPACK_IMPORTED_MODULE_2__router_router__["a" /* default */]
 });
 
+/*设置线上环境api前缀*/
+if (true) {
+    axios.defaults.baseURL = 'http://api.s1.lpg.com';
+} else if (process.env.NODE_ENV == 'production') {
+    axios.defaults.baseURL = 'http://api.lpg.com';
+    axios.defaults.transformRequest = function (data) {
+        return Qs.stringify(data);
+    };
+}
+
 new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
     router: router
 }).$mount('#app');
@@ -11420,7 +11430,7 @@ try {
 
 window.axios = __webpack_require__(20);
 
-window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
+// window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
 /**
  * Next we will register the CSRF Token as a common header with Axios so that
@@ -11428,13 +11438,13 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
  * a simple convenience so we don't have to attach every token manually.
  */
 
-var token = document.head.querySelector('meta[name="csrf-token"]');
-
-if (token) {
-  window.axios.defaults.headers.common['X-CSRF-TOKEN'] = token.content;
-} else {
-  console.error('CSRF token not found: https://laravel.com/docs/csrf#csrf-x-csrf-token');
-}
+// let token = document.head.querySelector('meta[name="csrf-token"]');
+//
+// if (token) {
+//     window.axios.defaults.headers.common['X-CSRF-TOKEN'] = token.content;
+// } else {
+//     console.error('CSRF token not found: https://laravel.com/docs/csrf#csrf-x-csrf-token');
+// }
 
 /**
  * Echo exposes an expressive API for subscribing to channels and listening

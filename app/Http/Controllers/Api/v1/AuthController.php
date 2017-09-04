@@ -8,6 +8,6 @@ class AuthController extends Controller{
 
     public function register(Request $request)
     {
-        dd(1);
+        return 1;
     }
 }

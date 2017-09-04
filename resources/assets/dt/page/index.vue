@@ -144,6 +144,15 @@
                     this.spanRight = 21;
                 }
             }
+        },
+        mounted(){
+            axios.get('v1/auth/register')
+                .then(data =>{
+                    console.log(data);
+                })
+                .catch(err =>{
+
+                })
         }
     }
 </script>
