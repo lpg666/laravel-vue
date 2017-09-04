@@ -1,6 +1,11 @@
 {
+    "/login.js": "/login.js",
     "/js/app.js": "/js/app.js",
     "/css/app.css": "/css/app.css",
     "/css/dt/dt.css": "/css/dt/dt.css",
-    "/js/dt/app.js": "/js/dt/app.js"
+    "/js/dt/app.js": "/js/dt/app.js",
+    "/example.js": "/example.js",
+    "/../example.js": "/../example.js",
+    "/../dt/js/example.js": "/../dt/js/example.js",
+    "/./js/dt/example.js": "/./js/dt/example.js"
 }
