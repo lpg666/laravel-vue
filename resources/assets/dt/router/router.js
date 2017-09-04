@@ -1,4 +1,4 @@
-import App from '../App.vue'
+import App from '../App'
 
 const example = r => require.ensure([], () => r(require('../page/Example')), './js/dt/example')
 

@@ -12,6 +12,6 @@
     <div id="app">
         <router-view></router-view>
     </div>
-<script src="{{asset('js/dt/app.js')}}"></script>
+<script src="{{asset('js/dt/main.js')}}"></script>
 </body>
 </html>

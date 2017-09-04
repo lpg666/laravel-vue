@@ -15,6 +15,6 @@
 </head>
 <body>
     @yield('content')
-    <script src="{{asset('js/dt/app.js')}}"></script>
+    <script src="{{asset('main.jss')}}"></script>
 </body>
 </html>
